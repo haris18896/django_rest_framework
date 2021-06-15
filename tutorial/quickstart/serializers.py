@@ -2,7 +2,7 @@ from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 
 
-class UserSerializer(serializers.HyperlinkedModelSerializer):   # we can also use primary key and various other relationships, but hyperlinking is good RESTful design.
+class UserSerializer(serializers.HyperlinkedModelSerializer):   # we can also use primary key and various other relationships, but hyperlinking is good RESTful design
     class Meta:
         model = User
         fields = ['url', 'username', 'email', 'groups']
