@@ -20,7 +20,7 @@ from django.urls import path, include
 # Additionally, we include login URLs for the browsable API.
 
 urlpatterns = [
-    path('', include('snippets.urls')),
+    path('', include('snippets.urls')), 
     path('admin/', admin.site.urls),
 
 ]
