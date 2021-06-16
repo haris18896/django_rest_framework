@@ -13,8 +13,6 @@ class SnippetDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = SnippetSerializer
 
 
-
-
 # # Again we're using the GenericAPIView class to provide the core functionality, and adding in mixins to provide the .retrieve(), .update() and .destroy() actions.
 # from snippets.models import Snippet
 # from snippets.serializers import SnippetSerializer
