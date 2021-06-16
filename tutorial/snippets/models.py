@@ -1,5 +1,5 @@
 from django.db import models
-from pygments.lexers import get_all_lexers
+from pygments.lexers import get_all_lexers  # # We'll be using this for the code highlighting   
 from pygments.styles import get_all_styles
 
 LEXERS = [item for item in get_all_lexers() if item[1]]
