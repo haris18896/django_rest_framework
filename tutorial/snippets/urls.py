@@ -59,6 +59,9 @@ urlpatterns = [
 #     path('users/<int:pk>/', user_detail, name='user-detail'),
 # ])
 
+
+
+
 # from django.urls import path
 # from rest_framework.urlpatterns import format_suffix_patterns
 # from snippets import views
