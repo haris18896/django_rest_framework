@@ -11,13 +11,13 @@ from rest_framework.reverse import reverse
 # Viewsets class based view
 """In the snippets/urls.py file we bind our ViewSet classes into a set of concrete views."""
 # Replacing the Userlist and UserDetail with single UserViewsets
-class UserViewSet(viewsets.ReadOnlyModelViewSet):
+class UserViewSet(viewsets.ReadOnlyModelViewSet):   # ReadOnlyModelViewSet only provide actions, e.g .list() and .retrieve()
     # This viewset automatically provide 'list' and 'retrieve' actions
     queryset = User.objects.all()
     serializer_class = UserSerializer
     
 # Next we're going to replace the SnippetList, SnippetDetail and SnippetHighlight view classes. We can remove the three views, and again replace them with a single class.
-class SnippetViewSet(viewsets.ModelViewSet):
+class SnippetViewSet(viewsets.ModelViewSet): # ModelViewSet provide .list(), ..retrieve(), .create(), .update(), .partial_update(), and .destroy().
     # This viewset automatically provides `list`, `create`, `retrieve`,`update` and `destroy` actions.
     # Additionally we also provide an extra `highlight` action.
     queryset = Snippet.objects.all()
